@@ -1,8 +1,4 @@
-""" Setup file for distutils
-
-"""
-
-from distutils.core import setup
+from setuptools import find_packages, setup
 
 setup(
     name='pymailgunner',
@@ -12,18 +8,18 @@ setup(
     url='https://github.com/pschmitt/pymailgunner',
     download_url='https://github.com/pschmitt/pymailgunner/archive/master.zip',
     description='A simple mailgun client - pymailgun fork with Python 3 support',
-    packages=['pymailgunner'],
+    packages=find_packages(),
     license='Apache license version 2.0',
     platforms='OS Independent',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        'Environment :: Web Environment',
-        'Development Status :: 4 - Beta'
+        'Environment :: Web Environment'
     ],
     install_requires='requests>=2.2.1'
 )
