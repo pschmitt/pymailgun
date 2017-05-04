@@ -5,14 +5,14 @@
 from distutils.core import setup
 
 setup(
-    name='pymailgun',
-    version='1.3',
-    author='Tony Sanchez',
-    author_email='mail.tsanchez@gmail.com',
-    url='https://github.com/cogniteev/pymailgun',
-    download_url='https://github.com/cogniteev/pymailgun/archive/master.zip',
-    description='A simple mailgun client',
-    packages=['pymailgun'],
+    name='pymailgunner',
+    version='1.4',
+    author='Philipp Schmitt',
+    author_email='philipp@schmitt.co',
+    url='https://github.com/pschmitt/pymailgunner',
+    download_url='https://github.com/pschmitt/pymailgunner/archive/master.zip',
+    description='A simple mailgun client - pymailgun fork with Python 3 support',
+    packages=['pymailgunner'],
     license='Apache license version 2.0',
     platforms='OS Independent',
     classifiers=[
