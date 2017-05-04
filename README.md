@@ -1,4 +1,4 @@
-pymailgun
+pymailgunner
 =========
 
 A simple mailgun client
@@ -7,7 +7,7 @@ Installation
 ============
 
 ```
-pip install pymailgun
+pip install pymailgunner
 ```
 
 Usage
