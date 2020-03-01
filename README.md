@@ -22,6 +22,14 @@ from pymailgunner import Client
 mailgun_client = Client({api_key}, {domain_name})
 ```
 
+Or, for domains in the EU Region, 
+
+``` python
+from pymailgunner import Client
+
+mailgun_client = Client({api_key}, {domain_name}, eu_domain=True)
+```
+
 Features
 ========
 
