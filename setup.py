@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='pymailgunner',
-    version='1.4',
+    version='1.5',
     author='Philipp Schmitt',
     author_email='philipp@schmitt.co',
     url='https://github.com/pschmitt/pymailgunner',
