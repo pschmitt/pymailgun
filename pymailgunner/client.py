@@ -34,11 +34,13 @@ class Client(object):
     @param domain: The domain to send mails from.
     @param sandbox: Whether to use the sandbox domain in case the domain is not
     provided.
+    @param eu_domain: Whether the domain is in the EU region
     """
 
-    def __init__(self, key, domain=None, sandbox=False):
+    def __init__(self, key, domain=None, sandbox=False, eu_domain=False):
         self._CACHE = {}  # Internal REST API response cache
         self.api_key = key
+        self.api_url = ('https://api.eu.mailgun.net/v2' if eu_domain else 'https://api.mailgun.net/v2')
         if not domain:
             domain = self.guess_domain(sandbox=sandbox)
         self.check_domain(domain)
@@ -100,7 +102,7 @@ class Client(object):
             if cache_index in self._CACHE:
                 logger.debug('Cache hit for index "{}"'.format(cache_index))
                 return self._CACHE[cache_index]
-        url = 'https://api.mailgun.net/v2/{}'.format(path)
+        url = '{}/{}'.format(self.api_url, path)
         auth = ('api', self.api_key)
         resp = requests.request(method, url, data=data, auth=auth, files=files)
         if resp.status_code == 401:
