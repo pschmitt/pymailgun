@@ -17,7 +17,7 @@ To create a mailgun Client you will need a mailgun api key and the domain name
 to use (must match the domain name registered on the mailgun website).
 
 ``` python
-from pymailgun import Client
+from pymailgunner import Client
 
 mailgun_client = Client({api_key}, {domain_name})
 ```
