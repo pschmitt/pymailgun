@@ -32,7 +32,7 @@ class Client(object):
 
     @param key: The API key.
     @param domain: The domain to send mails from.
-    @param sanbox: Whether to use the sanbox domain in case the domain is not
+    @param sandbox: Whether to use the sandbox domain in case the domain is not
     provided.
     """
 
